@@ -6,5 +6,15 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
-}
+  plugins: [
+    "@chakra-ui/gatsby-plugin",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "markdown-pages",
+        path: `${__dirname}/src/markdown/blog`,
+      },
+    },
+    "gatsby-transformer-remark",
+  ],
+};
