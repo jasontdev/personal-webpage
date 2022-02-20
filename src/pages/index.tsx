@@ -4,7 +4,7 @@ import { Text, Box, Heading, Button } from "@chakra-ui/react";
 import BlogPreview from "../components/BlogPreview";
 import BlogIndex from "../components/BlogIndex";
 
-interface BlogEntries {
+interface BlogPostMetadata {
   title: string;
   slug: string;
   date: string;
@@ -12,8 +12,8 @@ interface BlogEntries {
 
 export default function Home({ data }) {
   // TODO: massive cleanup needed here. horrible and inconsistent names
-  const blogEntries = data.allMarkdownRemark.edges;
-  const mostRecent = blogEntries
+  const blogPosts = data.allMarkdownRemark.edges;
+  const mostRecent = blogPosts
     .sort(
       (a, b) =>
         new Date(a.node.frontmatter.date).getTime() -
@@ -21,7 +21,7 @@ export default function Home({ data }) {
     )
     .reverse()[0].node;
 
-  const entries: BlogEntries[] = data.allMarkdownRemark.edges.map(edge => ({
+  const posts: BlogPostMetadata[] = data.allMarkdownRemark.edges.map(edge => ({
     title: edge.node.frontmatter.title,
     slug: edge.node.frontmatter.slug,
     date: edge.node.frontmatter.date,
@@ -51,10 +51,10 @@ export default function Home({ data }) {
               Read more
             </Button>
           </Box>
-          {entries.length > 1 ? (
+          {posts.length > 1 ? (
             <Box mt="1rem">
               <Heading size="md">Older posts</Heading>
-              <BlogIndex entries={entries.slice(0, entries.length - 2)} />
+              <BlogIndex posts={posts.slice(0, posts.length - 2)} />
             </Box>
           ) : (
             <div></div>
