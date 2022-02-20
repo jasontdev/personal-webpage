@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import HtmlContent from "../components/HtmlContent";
 
 export default function BlogPost({ data }) {
@@ -19,7 +19,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        slug
+        date
         title
       }
     }
