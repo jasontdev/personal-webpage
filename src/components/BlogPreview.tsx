@@ -1,21 +1,17 @@
 import React from "react";
 import { Box, Button, Text, Heading } from "@chakra-ui/react";
 import Link from "./Link";
+import FriendlyDate from "./FriendlyDate";
 
-export default function BlogPreview({
-  excerpt,
-  title,
-  description,
-  date,
-  slug,
-}) {
+export default function BlogPreview({ excerpt, title, date, slug }) {
   return (
     <Box>
       <Link to={slug}>
         <Heading size="lg">{title}</Heading>
       </Link>
-      <Heading size="sm">{date}</Heading>
-      <Text as="i">{description}</Text>
+      <Text as="i">
+        <FriendlyDate date={new Date(date)} />
+      </Text>
       <Text>{excerpt}</Text>
     </Box>
   );

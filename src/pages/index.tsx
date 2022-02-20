@@ -1,10 +1,17 @@
 import React from "react";
 import { graphql, navigate } from "gatsby";
-import {Text, Box, Heading, Button } from "@chakra-ui/react";
+import { Text, Box, Heading, Button } from "@chakra-ui/react";
 import BlogPreview from "../components/BlogPreview";
 import BlogIndex from "../components/BlogIndex";
 
+interface BlogEntries {
+  title: string;
+  slug: string;
+  date: string;
+}
+
 export default function Home({ data }) {
+  // TODO: massive cleanup needed here. horrible and inconsistent names
   const blogEntries = data.allMarkdownRemark.edges;
   const mostRecent = blogEntries
     .sort(
@@ -14,7 +21,7 @@ export default function Home({ data }) {
     )
     .reverse()[0].node;
 
-  const entries = data.allMarkdownRemark.edges.map(edge => ({
+  const entries: BlogEntries[] = data.allMarkdownRemark.edges.map(edge => ({
     title: edge.node.frontmatter.title,
     slug: edge.node.frontmatter.slug,
     date: edge.node.frontmatter.date,
@@ -22,11 +29,9 @@ export default function Home({ data }) {
 
   return (
     <Box>
-    <Box>
-      <Text>
-        Hi, I'm Jason, web developer from Brisbane, Australia.
-      </Text>
-</Box>
+      <Box>
+        <Text>Hi, I'm Jason, web developer from Brisbane, Australia.</Text>
+      </Box>
       <Box>
         <Box display="flex" justifyContent="center" mt="1rem">
           <Button onClick={() => navigate("/about")}>Learn more</Button>
@@ -38,7 +43,6 @@ export default function Home({ data }) {
           <BlogPreview
             title={mostRecent.frontmatter.title}
             date={mostRecent.frontmatter.date}
-            description={mostRecent.frontmatter.description}
             excerpt={mostRecent.excerpt}
             slug={mostRecent.frontmatter.slug}
           />
@@ -47,10 +51,14 @@ export default function Home({ data }) {
               Read more
             </Button>
           </Box>
-          <Box mt="1rem">
-            <Heading size="md">Older posts</Heading>
-            <BlogIndex entries={entries} />
-          </Box>
+          {entries.length > 1 ? (
+            <Box mt="1rem">
+              <Heading size="md">Older posts</Heading>
+              <BlogIndex entries={entries.slice(0, entries.length - 2)} />
+            </Box>
+          ) : (
+            <div></div>
+          )}
         </Box>
       </Box>
     </Box>

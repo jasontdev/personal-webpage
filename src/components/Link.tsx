@@ -2,7 +2,13 @@ import React from "react";
 import { Link as ChakraLink, LinkProps } from "@chakra-ui/react";
 import { Link as GatsbyLink } from "gatsby";
 
-export default function Link({ to, href, children }) {
+interface LinkPropType {
+  to?: string;
+  href?: string;
+  children?: React.ReactNode;
+}
+
+export default function Link({ to, href, children }: LinkPropType) {
   if (to) {
     return (
       <ChakraLink as={GatsbyLink} to={to}>
