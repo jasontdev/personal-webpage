@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql, navigate } from "gatsby";
-import { Box, Heading, Button } from "@chakra-ui/react";
-import Intro from "../components/Intro";
+import {Text, Box, Heading, Button } from "@chakra-ui/react";
 import BlogPreview from "../components/BlogPreview";
 import BlogIndex from "../components/BlogIndex";
 
@@ -23,8 +22,12 @@ export default function Home({ data }) {
 
   return (
     <Box>
+    <Box>
+      <Text>
+        Hi, I'm Jason, web developer from Brisbane, Australia.
+      </Text>
+</Box>
       <Box>
-        <Intro />
         <Box display="flex" justifyContent="center" mt="1rem">
           <Button onClick={() => navigate("/about")}>Learn more</Button>
         </Box>
