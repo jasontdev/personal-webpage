@@ -13,7 +13,6 @@ export default function Navbar() {
       </Box>
       <Box display="flex" alignItems="center" gap="1rem">
         <Link to="/about">about</Link>
-        <Link to="/blog">blog</Link>
         <Link to="/projects">projects</Link>
       </Box>
     </Box>
