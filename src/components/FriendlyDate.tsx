@@ -20,7 +20,7 @@ export default function FriendlyDate({ date }: FriendlyDateProps) {
     "December",
   ];
 
-  let datePostfix = "rd";
+  let datePostfix = "th";
   const day = date.getDate();
   if (day == 1 || day == 21 || day == 31) {
     datePostfix = "st";
@@ -28,6 +28,10 @@ export default function FriendlyDate({ date }: FriendlyDateProps) {
 
   if (day == 2 || day == 22) {
     datePostfix = "nd";
+  }
+
+  if (day == 3 || day == 23) {
+    datePostfix = "rd";
   }
 
   const friendlyDate = `${
