@@ -12,6 +12,7 @@ export default function Navbar() {
         </Heading>
       </Box>
       <Box display="flex" alignItems="center" gap="1rem">
+        <Link to="/">blog</Link>
         <Link to="/about">about</Link>
         <Link to="/projects">projects</Link>
       </Box>

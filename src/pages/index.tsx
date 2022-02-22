@@ -3,6 +3,7 @@ import { graphql, navigate } from "gatsby";
 import { Text, Box, Heading, Button } from "@chakra-ui/react";
 import BlogPreview from "../components/BlogPreview";
 import BlogIndex from "../components/BlogIndex";
+import PageMeta from "../components/PageMeta";
 
 interface BlogPostMetadata {
   title: string;
@@ -29,8 +30,11 @@ export default function Home({ data }) {
 
   return (
     <Box>
+      <PageMeta title="Jason Telfer - Web Developer" slug="/" />
       <Box>
-        <Text>Hi, I'm Jason, web developer from Brisbane, Australia.</Text>
+        <Text>
+          Hi, I'm Jason Telfer, web developer from Brisbane, Australia.
+        </Text>
       </Box>
       <Box>
         <Box display="flex" justifyContent="center" mt="1rem">
