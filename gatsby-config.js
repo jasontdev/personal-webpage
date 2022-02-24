@@ -12,10 +12,11 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "markdown-pages",
-        path: `${__dirname}/src/markdown/blog`,
+        path: `${__dirname}/src/markdown/`,
       },
     },
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-typescript",
   ],
 };

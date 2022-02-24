@@ -1,19 +1,20 @@
-import { Box, Text, Heading } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 import Link from "./Link";
 import FriendlyDate from "./FriendlyDate";
+import { BlogPostMetadata } from "../pages";
 
-export default function BlogIndex({ entries }) {
+export default function BlogIndex({ posts }) {
   return (
     <Box>
-      {entries.map(entry => (
+      {posts.map((post: BlogPostMetadata) => (
         <Box>
           <Text as="b">
-            <Link to={entry.slug}>{entry.title}</Link>
+            <Link to={post.slug}>{post.title}</Link>
           </Text>
           <br />
           <Text as="i">
-            <FriendlyDate date={new Date(entry.date)} />
+            <FriendlyDate date={new Date(post.date)} />
           </Text>
         </Box>
       ))}

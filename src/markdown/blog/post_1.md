@@ -1,4 +1,5 @@
 ---
+template: blog
 slug: /blog/welcome-to-my-blog
 date: 2022-01-13T09:00:00.000+10:00
 title: Welcome to my blog

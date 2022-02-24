@@ -5,10 +5,26 @@ import BlogPreview from "../components/BlogPreview";
 import BlogIndex from "../components/BlogIndex";
 import PageMeta from "../components/PageMeta";
 
-interface BlogPostMetadata {
+export interface BlogPostMetadata {
   title: string;
   slug: string;
   date: string;
+}
+
+interface Edge {
+  node: Node;
+}
+
+interface Node {
+  excerpt: string;
+  frontmatter: Frontmatter;
+}
+
+interface Frontmatter {
+  title: string;
+  date: string;
+  description: string;
+  slug: string;
 }
 
 export default function Home({ data }) {
@@ -16,7 +32,7 @@ export default function Home({ data }) {
   const blogPosts = data.allMarkdownRemark.edges;
   const mostRecent = blogPosts
     .sort(
-      (a, b) =>
+      (a: Edge, b: Edge) =>
         new Date(a.node.frontmatter.date).getTime() -
         new Date(b.node.frontmatter.date).getTime()
     )
@@ -71,7 +87,7 @@ export default function Home({ data }) {
 
 export const indexPageQuery = graphql`
   query BlogPreviewQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: { frontmatter: { template: { eq: "blog" } } }) {
       edges {
         node {
           excerpt(pruneLength: 300)
