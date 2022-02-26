@@ -20,7 +20,9 @@ export default function Projects({ data }) {
       <Heading size="lg" mb="1rem">
         Projects
       </Heading>
-      {renderProjectPreviews(projects)}
+      <Box display="flex" flexDirection="column" gap="2rem">
+        {renderProjectPreviews(projects)}
+      </Box>
     </Box>
   );
 }

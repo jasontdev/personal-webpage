@@ -29,10 +29,10 @@ export default function ProjectPreview({ frontmatter }: ProjectPreviewProps) {
       <Text>{description}</Text>
       <Box display="flex" gap="1rem" mt="1rem">
         <Link as={GatsbyLink} href={demo} isExternal>
-          Launch demo <ExternalLinkIcon mx="2px" />
+          🚀 Launch demo <ExternalLinkIcon mx="2px" />
         </Link>
         <Link as={GatsbyLink} href={github} isExternal>
-          Github <ExternalLinkIcon mx="2px" />
+          🤖 Github <ExternalLinkIcon mx="2px" />
         </Link>
       </Box>
     </Box>
