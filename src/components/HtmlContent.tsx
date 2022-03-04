@@ -3,7 +3,7 @@ import { Box, Text } from "@chakra-ui/react";
 import { unified } from "unified";
 import rehypeParse from "rehype-parse";
 import rehypeReact from "rehype-react";
-import { Title, Heading, SubHeading, Paragraph } from "./typography";
+import { Title, Heading, SubHeading, Paragraph, Code } from "./typography";
 import Link from "./Link";
 
 export default function HtmlContent({ html }) {
@@ -17,6 +17,7 @@ export default function HtmlContent({ html }) {
         h2: Heading,
         h3: SubHeading,
         a: Link,
+        code: Code,
       },
     });
 
