@@ -1,18 +1,17 @@
 import React from "react";
-import { Box, Button, Text, Heading } from "@chakra-ui/react";
-import Link from "./Link";
+import { Link } from "gatsby";
 import FriendlyDate from "./FriendlyDate";
 
 export default function BlogPreview({ excerpt, title, date, slug }) {
   return (
-    <Box>
+    <div>
       <Link to={slug}>
-        <Heading size="lg">{title}</Heading>
+        <h3>{title}</h3>
       </Link>
-      <Text as="i">
+      <p>
         <FriendlyDate date={new Date(date)} />
-      </Text>
-      <Text>{excerpt}</Text>
-    </Box>
+      </p>
+      <p>{excerpt}</p>
+    </div>
   );
 }

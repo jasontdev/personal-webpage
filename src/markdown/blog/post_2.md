@@ -23,7 +23,7 @@ on mobile.
         display: flex;
         justify-content: center;
         width: 100hw;
-        maxWidth: 100%;
+        min-width: 100%;
     }
 
     .content {

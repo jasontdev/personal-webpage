@@ -1,23 +1,22 @@
-import { Box, Text } from "@chakra-ui/react";
 import React from "react";
-import Link from "./Link";
+import { Link } from "gatsby";
 import FriendlyDate from "./FriendlyDate";
 import { BlogPostMetadata } from "../pages";
 
 export default function BlogIndex({ posts }) {
   return (
-    <Box>
+    <div>
       {posts.map((post: BlogPostMetadata) => (
-        <Box>
-          <Text as="b">
+        <div>
+          <p>
             <Link to={post.slug}>{post.title}</Link>
-          </Text>
+          </p>
           <br />
-          <Text as="i">
+          <p>
             <FriendlyDate date={new Date(post.date)} />
-          </Text>
-        </Box>
+          </p>
+        </div>
       ))}
-    </Box>
+    </div>
   );
 }

@@ -7,7 +7,6 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    "@chakra-ui/gatsby-plugin",
     {
       resolve: "gatsby-source-filesystem",
       options: {

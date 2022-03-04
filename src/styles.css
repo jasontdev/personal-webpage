@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-width: 100%;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  width: min(100vw, 650px);
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

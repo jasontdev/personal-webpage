@@ -1,15 +1,14 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
-
 import Navbar from "./Navbar";
+import "../styles.css";
 
 export default function Layout({ children }) {
   return (
-    <Box width="100vw" display="flex" justifyContent="center">
-      <Box width={["100%", 650]} padding="1rem">
+    <div className="layout">
+      <div className="centered">
         <Navbar />
-        <Box mt={3}>{children}</Box>
-      </Box>
-    </Box>
+        <div>{children}</div>
+      </div>
+    </div>
   );
 }

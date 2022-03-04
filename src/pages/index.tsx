@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, navigate } from "gatsby";
-import { Text, Box, Heading, Button } from "@chakra-ui/react";
 import BlogPreview from "../components/BlogPreview";
 import BlogIndex from "../components/BlogIndex";
 import PageMeta from "../components/PageMeta";
@@ -45,43 +44,41 @@ export default function Home({ data }) {
   }));
 
   return (
-    <Box>
+    <div>
       <PageMeta title="Jason Telfer - Web Developer" slug="/" />
-      <Box>
-        <Text>
-          Hi, I'm Jason Telfer, web developer from Brisbane, Australia.
-        </Text>
-      </Box>
-      <Box>
-        <Box display="flex" justifyContent="center" mt="1rem">
-          <Button onClick={() => navigate("/about")}>Learn more</Button>
-        </Box>
-      </Box>
-      <Box mt="1rem">
-        <Heading size="md">Latest post</Heading>
-        <Box>
+      <div>
+        <p>Hi, I'm Jason Telfer, web developer from Brisbane, Australia.</p>
+      </div>
+      <div>
+        <div>
+          <button onClick={() => navigate("/about")}>Learn more</button>
+        </div>
+      </div>
+      <div>
+        <h3>Latest post</h3>
+        <div>
           <BlogPreview
             title={mostRecent.frontmatter.title}
             date={mostRecent.frontmatter.date}
             excerpt={mostRecent.excerpt}
             slug={mostRecent.frontmatter.slug}
           />
-          <Box display="flex" justifyContent="center" mt="1rem">
-            <Button onClick={() => navigate(mostRecent.frontmatter.slug)}>
+          <div>
+            <button onClick={() => navigate(mostRecent.frontmatter.slug)}>
               Read more
-            </Button>
-          </Box>
+            </button>
+          </div>
           {posts.length > 1 ? (
-            <Box mt="1rem">
-              <Heading size="md">Older posts</Heading>
+            <div>
+              <h3>Older posts</h3>
               <BlogIndex posts={posts.slice(0, posts.length - 2)} />
-            </Box>
+            </div>
           ) : (
             <div></div>
           )}
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 }
 

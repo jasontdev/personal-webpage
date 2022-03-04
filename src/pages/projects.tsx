@@ -1,6 +1,5 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
-import { graphql, navigate } from "gatsby";
 import React from "react";
+import { graphql, navigate } from "gatsby";
 import ProjectPreview from "../components/ProjectPreview";
 
 export default function Projects({ data }) {
@@ -16,14 +15,10 @@ export default function Projects({ data }) {
 
   const projects = data.allMarkdownRemark.edges;
   return (
-    <Box>
-      <Heading size="lg" mb="1rem">
-        Projects
-      </Heading>
-      <Box display="flex" flexDirection="column" gap="2rem">
-        {renderProjectPreviews(projects)}
-      </Box>
-    </Box>
+    <div>
+      <h3>Projects</h3>
+      <div>{renderProjectPreviews(projects)}</div>
+    </div>
   );
 }
 
