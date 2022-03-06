@@ -14,14 +14,19 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@fontsource/open-sans": "^4.5.5",
+    "@fontsource/work-sans": "^4.5.5",
     "@react-icons/all-files": "^4.1.0",
     "@types/react": "^17.0.39",
     "@types/react-helmet": "^6.1.5",
+    "dracula-prism": "^2.1.7",
     "gatsby": "^4.7.1",
     "gatsby-plugin-react-helmet": "^5.7.0",
     "gatsby-plugin-typescript": "^4.8.0",
+    "gatsby-remark-prismjs": "^6.9.0",
     "gatsby-source-filesystem": "^4.7.0",
-    "gatsby-transformer-remark": "^5.7.0",
+    "gatsby-transformer-remark": "^5.9.0",
+    "prismjs": "^1.27.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0"

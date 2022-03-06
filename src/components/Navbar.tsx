@@ -5,14 +5,30 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div>
-        <h3>
-          <Link to="/">jasont.dev</Link>
-        </h3>
+        <div className="navbar-brand">jasont.dev</div>
       </div>
       <div className="navbar-items">
-        <Link to="/">blog</Link>
-        <Link to="/about">about</Link>
-        <Link to="/projects">projects</Link>
+        <Link
+          className="navbar-link"
+          activeClassName="navbar-link-active"
+          to="/"
+        >
+          blog
+        </Link>
+        <Link
+          className="navbar-link"
+          activeClassName="navbar-link-active"
+          to="/about"
+        >
+          about
+        </Link>
+        <Link
+          className="navbar-link"
+          activeClassName="navbar-link-active"
+          to="/projects"
+        >
+          projects
+        </Link>
       </div>
     </div>
   );

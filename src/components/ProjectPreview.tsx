@@ -22,7 +22,7 @@ export default function ProjectPreview({ frontmatter }: ProjectPreviewProps) {
         <Link to={slug}>{title}</Link>
       </h3>
       <p>{description}</p>
-      <div>
+      <div className="project-preview-links">
         <Link href={demo}>🚀 Launch demo</Link>
         <Link href={github}>🤖 Github</Link>
       </div>

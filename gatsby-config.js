@@ -14,7 +14,19 @@ module.exports = {
         path: `${__dirname}/src/markdown/`,
       },
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              noInlineHighlight: true,
+            },
+          },
+        ],
+      },
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-typescript",
   ],
