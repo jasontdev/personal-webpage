@@ -71,7 +71,7 @@ export default function Home({ data }) {
           {posts.length > 1 ? (
             <div>
               <h3>Older posts</h3>
-              <BlogIndex posts={posts.slice(0, posts.length - 2)} />
+              <BlogIndex posts={posts.slice(1)} />
             </div>
           ) : (
             <div></div>

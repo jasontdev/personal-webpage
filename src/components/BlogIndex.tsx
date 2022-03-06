@@ -8,13 +8,12 @@ export default function BlogIndex({ posts }) {
     <div>
       {posts.map((post: BlogPostMetadata) => (
         <div>
-          <p>
-            <Link to={post.slug}>{post.title}</Link>
-          </p>
-          <br />
-          <p>
+          <div className="blog-index-item">
+            <Link className="blog-index-item-link" to={post.slug}>
+              {post.title}
+            </Link>
             <FriendlyDate date={new Date(post.date)} />
-          </p>
+          </div>
         </div>
       ))}
     </div>
