@@ -6,6 +6,7 @@ body {
 }
 
 a {
+    color: #313131;
     text-decoration: none;
 }
 
@@ -28,7 +29,7 @@ button {
   color: white;
   font-weight: bold;
   font-size: medium;
-  background-color: dodgerblue;
+  background-color: royalblue;
 }
 
 .layout {
