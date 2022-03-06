@@ -1,12 +1,12 @@
 ---
 template: blog
-slug: /blog/my-most-used-flexbox-responsive-layout
+slug: /blog/my-most-used-responsive-layout
 date: 2022-03-05T10:03:00.000+10:00
-title: My most used Flexbox responsive layout
+title: My most used responsive Flexbox layout
 description: A quick and easy responsive layout using Flexbox only
 ---
 
-# My most used responsive layout
+# My most used responsive Flexbox layout
  
 While learning web development, one thing I have done a lot of is
 start new projects. The goal is generally to get up and running 
