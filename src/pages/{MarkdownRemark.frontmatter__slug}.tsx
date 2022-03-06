@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import PageMeta from "../components/PageMeta";
 
-export default function BlogPost({ data }) {
+export default function MarkdownContent({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 

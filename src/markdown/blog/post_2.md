@@ -58,7 +58,8 @@ narrow on desktop and tablet.
 ```
 
 Using `min(650px, 100%)` makes the layout responsive by 
-setting the width of the content container to the smallest of `100%` or `650px`.  
+setting the width of the content container to the smallest of `100%` or 
+`650px`.  
   
 On desktop, tablets and phones held horizontally, the viewport width will
 exceed `650px`, resulting in the width of the content container being set to
