@@ -1,9 +1,10 @@
 /* using postcss with the precss plugin to provide some nice syntactic sugar */
 
 $black: #313131;
-$center-width: $650px;
+$center-width: 650px;
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -12,11 +13,17 @@ html, body {
   color: $black;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: $black;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Work Sans", sans-serif;
 }
 
@@ -59,34 +66,34 @@ button {
 }
 
 .navbar-brand {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .navbar-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .navbar-link-active {
-    color: red;
+  color: red;
 }
 
 .project-preview-links {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .skills-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .blog-index-item {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .blog-index-item-link {
-    font-weight: bold;
+  font-weight: bold;
 }
