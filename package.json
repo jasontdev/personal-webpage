@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "personal-website",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Personal website of Jason Telfer",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -22,15 +22,16 @@
     "dracula-prism": "^2.1.7",
     "gatsby": "^4.7.1",
     "gatsby-plugin-react-helmet": "^5.7.0",
+    "gatsby-plugin-sass": "^5.9.0",
     "gatsby-plugin-typescript": "^4.8.0",
     "gatsby-remark-prismjs": "^6.9.0",
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-transformer-remark": "^5.9.0",
-    "precss": "^4.0.0",
     "prismjs": "^1.27.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "sass": "^1.49.9"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.11.0",
@@ -43,8 +44,6 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "gatsby-plugin-postcss": "^5.9.0",
-    "postcss": "^8.4.7",
     "prettier": "^2.5.1",
     "typescript": "^4.5.5"
   },
