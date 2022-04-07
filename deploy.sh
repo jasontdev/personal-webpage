@@ -1,1 +1,1 @@
-npx gatsby build && rsync -avz --delete public/ admin@jasont.dev:/var/www/jasontdev/html
+npx gatsby build && aws s3 sync public s3://jasont.dev
