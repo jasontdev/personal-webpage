@@ -12,7 +12,10 @@ export default function BlogIndex({ posts }) {
             <Link className="blog-index-item-link" to={post.slug}>
               {post.title}
             </Link>
-            <FriendlyDate date={new Date(post.date)} />
+            <FriendlyDate
+              className="blog-index-item-date"
+              date={new Date(post.date)}
+            />
           </div>
         </div>
       ))}

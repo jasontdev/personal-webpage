@@ -30,7 +30,7 @@ Vultr and Digital Ocean, hosting will be moved to an S3 bucket. This requires mo
 from Cloudflare to AWS Cloudfront in order to be able to serve content from the S3 bucket
 via https. I will also move from Cloudflare DNS to AWS Route53. This setup is a lot more 
 complicated than a VPS running nginx, but the developer experience will be much the same,
-using S3's rsync tool to synchronise changes.
+using S3's sync tool to synchronise changes.
 
 ## The method
 For a simple site this is a prickly job with a lot of moving parts and potential for faults.

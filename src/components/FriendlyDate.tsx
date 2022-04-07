@@ -1,10 +1,13 @@
-import React from "react";
+import React, { ClassAttributes, ReactHTMLElement } from "react";
 
 interface FriendlyDateProps {
   date: Date;
 }
 
-export default function FriendlyDate({ date }: FriendlyDateProps) {
+export default function FriendlyDate({
+  date,
+  className,
+}: FriendlyDateProps & React.HTMLAttributes<HTMLDivElement>) {
   const months = [
     "January",
     "February",
@@ -38,5 +41,5 @@ export default function FriendlyDate({ date }: FriendlyDateProps) {
     months[date.getMonth()]
   } ${day}${datePostfix}, ${date.getFullYear()}`;
 
-  return <div>{friendlyDate}</div>;
+  return <div className={className}>{friendlyDate}</div>;
 }
