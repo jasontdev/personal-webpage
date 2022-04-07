@@ -55,10 +55,10 @@ reachable during all stages either at the Vultr VPS or S3 bucket
 ### Stage 4
 - Setup a Cloudfront distribution with https certificate for S3 bucket. AWS can provide a certicate based on records added to Route53 that prove we are the rightful owners of jasont.dev without actually changing the CNAME. This means we can test the Cloudfront distribution of the website in isolation via the distribution URL.
 ### Stage 5
-- Change jasont.dev DNS records in Route53 to point to the Cloudfront distribution.
+- Change jasont.dev NS records in Route53 to point to the Cloudfront distribution.
 - Thoroughly test before tearing down any of the Cloudflare or Vultr infra.
 
 ## Thoughts
 At the time of writing, I have complete stage 1 and I'm about to proceed with stage 2. Looking
 forward to (hopefully) providing an update on how and why this all went smoothly in part 2. 
-With me luck!
+wish me luck!
