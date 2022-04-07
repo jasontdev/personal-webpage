@@ -12,6 +12,7 @@ export default function MarkdownContent({ data }) {
         title={`${frontmatter.title} - Jason Telfer`}
         slug={frontmatter.slug}
       />
+      <h1>{frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   );

@@ -5,9 +5,6 @@ date: 2022-04-06T15:28:00.000+10:00
 title: Migrating to AWS (again) pt. 1
 description: Planning and motivation for moving my blog back to AWS
 ---
-
-# Migrating to AWS (again) pt. 1
-
 After enjoying the simplicity of hosting my website 
 using Vultr VPS, the number of dev jobs looking for AWS/Azure/GCP
 experience is too big to ignore. So I have decided its time to start deploying to AWS

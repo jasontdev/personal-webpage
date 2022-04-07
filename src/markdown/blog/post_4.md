@@ -5,8 +5,6 @@ date: 2022-04-07T21:04:00.000+10:00
 title: Migrating to AWS (again) pt. 2
 description: Outcome of the attempt to migrate to AWS. Did it go to plan?
 --- 
-# Migrating to AWS (again) pt. 2
-
 Fully migrating a website from one DNS provider, CDN and host
 has never gone smoothly for me. With so many moving parts
 and slow DNS propagation, this can get very broken and very

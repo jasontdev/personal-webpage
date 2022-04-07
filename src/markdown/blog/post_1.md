@@ -5,9 +5,6 @@ date: 2022-01-13T09:00:00.000+10:00
 title: Welcome to my blog
 description: Introduction to me and what I am trying to acheive.
 ---
-
-# Welcome to my blog
-
 ## Purpose
 
 This blog is a place for me to record my journey in web development, share my knowledge
