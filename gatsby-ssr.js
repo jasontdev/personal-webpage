@@ -1,6 +1,6 @@
 import React from "react";
-import "@fontsource/open-sans";
 import "@fontsource/work-sans";
+import "@fontsource/merriweather";
 import "dracula-prism/dist/css/dracula-prism.css";
 import Layout from "./src/components/Layout";
 

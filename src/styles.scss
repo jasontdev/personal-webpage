@@ -1,16 +1,33 @@
-/* using postcss with the precss plugin to provide some nice syntactic sugar */
-
-$black: #313131;
+$black: #212529;
 $center-width: 650px;
+$body-font-family: "Merriweather", serif;
+$heading-font-family: "Open Sans", sans-serif;
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.05rem;
+  font-family: $body-font-family;
+  font-size: large;
   line-height: 1.2;
   color: $black;
+}
+
+@mixin headings {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}
+
+@include headings {
+  font-family: $heading-font-family;
+  font-weight: bold;
+  color: #0F0F64;
 }
 
 a,
@@ -18,13 +35,10 @@ a:visited {
   color: $black;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Work Sans", sans-serif;
+a {
+  text-decoration: none;
+  @include headings {
+  }
 }
 
 button {
@@ -55,6 +69,7 @@ button {
 .navbar {
   display: flex;
   justify-content: space-between;
+  font-family: $heading-font-family;
   font-size: larger;
   align-items: center;
 }
@@ -95,7 +110,7 @@ button {
 }
 
 .blog-index-item-date {
-    color: dimgrey;
+  color: dimgrey;
 }
 
 .blog-index-item-link {
