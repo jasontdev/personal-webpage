@@ -11,6 +11,7 @@ body {
   font-size: large;
   line-height: 1.2;
   color: $black;
+  background-color: ghostwhite;
 }
 
 @mixin headings {
@@ -27,7 +28,7 @@ body {
 @include headings {
   font-family: $heading-font-family;
   font-weight: bold;
-  color: #0F0F64;
+  color: royalblue;
 }
 
 a,
