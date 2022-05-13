@@ -1,35 +1,18 @@
 import React from "react";
-import { graphql, navigate } from "gatsby";
+import { graphql } from "gatsby";
 import PageMeta from "../components/PageMeta";
 import Navbar from "../components/Navbar";
-
-export interface BlogPostMetadata {
-  title: string;
-  slug: string;
-  date: string;
-}
-
-interface Edge {
-  node: Node;
-}
-
-interface Node {
-  excerpt: string;
-  frontmatter: Frontmatter;
-}
-
-interface Frontmatter {
-  title: string;
-  date: string;
-  description: string;
-  slug: string;
-}
+import {
+  BlogPreview,
+  BlogPreviewQueryNode,
+  BlogPreviewQueryEdge,
+} from "../components/BlogPreview";
 
 export default function Home({ data }) {
   // TODO: massive cleanup needed here. horrible and inconsistent names
   const blogPosts = data.allMarkdownRemark.edges
     .sort(
-      (a: Edge, b: Edge) =>
+      (a: BlogPreviewQueryEdge, b: BlogPreviewQueryEdge) =>
         new Date(a.node.frontmatter.date).getTime() -
         new Date(b.node.frontmatter.date).getTime()
     )
@@ -39,7 +22,10 @@ export default function Home({ data }) {
     <div>
       <PageMeta title="Jason Telfer - Web Developer" slug="/" />
       <Navbar />
-      <div className="container px-10 mt-5">
+      <div className="flex flex-col gap-3 px-5">
+        {blogPosts.map((post: BlogPreviewQueryEdge, index: number) => (
+          <BlogPreview post={post.node} index={index}/>
+        ))}
       </div>
     </div>
   );
