@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, navigate } from "gatsby";
-import BlogPreview from "../components/BlogPreview";
 import PageMeta from "../components/PageMeta";
+import Navbar from "../components/Navbar";
 
 export interface BlogPostMetadata {
   title: string;
@@ -38,25 +38,8 @@ export default function Home({ data }) {
   return (
     <div>
       <PageMeta title="Jason Telfer - Web Developer" slug="/" />
-      <div>
-        <p>Hi, I'm Jason Telfer, web developer from Brisbane, Australia.</p>
-      </div>
-      <div>
-        <div>
-          <button onClick={() => navigate("/about")}>Learn more</button>
-        </div>
-      </div>
-      <div>
-        <div>
-          {blogPosts.map(blog => 
-            <BlogPreview
-              title={blog.node.frontmatter.title}
-              date={blog.node.frontmatter.date}
-              excerpt={blog.node.excerpt}
-              slug={blog.node.frontmatter.slug}
-            />
-          )}
-        </div>
+      <Navbar />
+      <div className="container px-10 mt-5">
       </div>
     </div>
   );
